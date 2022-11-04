@@ -1,0 +1,98 @@
+body {
+    background-color: rgb(192, 192, 192);
+}
+.arrow-right {
+    background-color: rgb(192, 192, 192);
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-left: 20px solid rgb(111, 116, 111);
+    position: relative;
+    left: 10px;
+    cursor: pointer;
+}
+
+.arrow-left {
+    background-color: rgb(192, 192, 192);
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid transparent;
+    border-right: 20px solid rgb(111, 116, 111);
+    position: relative;
+    right: 10px;
+    cursor: pointer;
+}
+
+.arrow-right:hover {
+    background-color: rgb(192, 192, 192);;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-left: 20px solid rgb(54, 54, 54);
+    cursor: pointer;
+}
+
+.arrow-left:hover {
+    background-color: rgb(192, 192, 192);
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid transparent;
+    border-right: 20px solid rgb(54, 54, 54);
+    cursor: pointer;
+}
+
+.photo-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 30px;
+}
+
+.photos {
+    position: relative;
+    border: 10px solid white;
+    display: none;
+
+}
+#wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.napis {
+    width: 300px;
+    height: 60px;
+    position: absolute; bottom: 0px; right: 0px;
+    background-color: rgba(0, 0, 0, 0.674);
+}
+
+.napis p{
+    position: absolute; 
+    margin: 5%;
+    color: #ffffff;
+}
+
+.minicontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    gap: 10px;
+    position: relative; top: 400px; right: 32%;
+}
+
+.minia {
+    position: relative;
+    vertical-align: middle;
+    opacity: 0.7;
+}
+
+.minia img {
+    vertical-align: middle;
+}

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset — kopia.html">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shopping cart style.css">
+    <link rel="stylesheet" href="browsing style.css">
+    <script src="script.js"></script>
+    <script src="shopping cart.js"></script>
+    <script src="browsing.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <div class="menu">
+      <div class="fixedmenu">
+        <div class="menu-container">
+          <h1>PENGUIN CLOTHES</h1>
+        </div>
+        <div class="categories">
+          <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Woman</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#Jeans">Jeans</a>
+              <a href="#tops">Tops</a>
+              <a href="#Skirts">Skirts</a>
+              <a href="#Dresses">Dresses</a>
+              <a href="#Accesories">Accesories</a>
+              <a href="#Sale">Sale</a>
+            </div>
+          </div>
+          <div class="dropdown2">
+            <button onclick="myFunction2()" class="dropbtn2">Man</button>
+            <div id="myDropdown2" class="dropdown-content2">
+              <a href="#Jeans">Jeans</a>
+              <a href="#tops">Tops</a>
+              <a href="#Skirts">Skirts</a>
+              <a href="#Dresses">Dresses</a>
+              <a href="#Accesories">Accesories</a>
+              <a href="#Sale">Sale</a>
+            </div>
+          </div>
+          <div class="dropdown3">Kids</div>
+          <div class="dropdown4">Season</div>
+          <div class="dropdownx">
+            <input type="text" id="myText" placeholder="Search...">
+            <button  class="shopbtn" id="myBtn" ><i class="fa fa-shopping-cart"></i></button>
+            <div id="shop" class="shopping-content" aria-hidden="true" hidden>
+              <div class="shopfixed">
+                <div class='shop-menu'></div>
+                <h2 class="section-header">CART</h2>
+                <div class="cart-row">
+                    <span class="cart-item cart-header cart-column">ITEM</span>
+                    <span class="cart-price cart-header cart-column">PRICE</span>
+                    <span class="cart-quantity cart-header cart-column">QTY</span>
+                    <span class="cart-size cart-header cart-column">SIZE</span>
+                    <span class="cart-color cart-header cart-column">COLOR</span>
+                </div>
+              </div>
+              <div class="cart-items"></div>
+              <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">0sek</span>
+              </div>
+              <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item items" id="amazingJeans">
+      <div class="wrap">
+        <div class="small-pics">
+          <div id="min1" class="small-pic1"><img class="small-pic-img" src="Icons & Images/small-pic1.jpeg" alt="small-pic1" width="50px" height="50px"></div>
+          <div id="min2" class="small-pic2"><img class="small-pic-img" src="Icons & Images/small-pic2.jpeg" alt="small-pic2" width="50px" height="50px"></div>
+          <div id="min3" class="small-pic3"><img class="small-pic-img" src="Icons & Images/small-pic3.jpeg" alt="small-pic3" width="50px" height="50px"></div>
+        </div>
+        <div class="wrap2">     
+          <div class="large-pic">
+            <button id="change-btn-left" type="button" class="arrow-left"></button>
+              <div id="1" class="photos"><img class="shop-item-image" class="large-pic-img" src="Icons & Images/large-pic.jpeg" alt="large-pic-img" width="300px" height="300px"></div>
+              <div id="2" class="photos"><img class="large-pic-img" src="Icons & Images/large-pic2.jpeg" alt="large-pic-img" width="300px" height="300px"></div>
+              <div id="3" class="photos"><img class="large-pic-img" src="Icons & Images/large-pic3.jpeg" alt="large-pic-img" width="300px" height="300px"></div>
+            <button id="change-btn-right" type="button" class="arrow-right"></button>
+          </div>
+          <div class="exp"><button id="expand-btn">Click to expand <img src="Icons & Images/magnifying-icon.png"
+            alt="magnifying-icon"></button></div>
+        </div>    
+      </div>
+      <div class="item-info">
+        <span id="amazjeans" class="shop-item-title"><p>Amazing Jeans</p></span>
+        <div class="itemsize">
+          <h5>Available sizes:</h5>
+          <div class="size-option">S</div>
+          <div class="size-option">M</div>
+          <div class="size-option">L</div>
+          <div class="size-option">XL</div>
+        </div>
+        <div class="itemcolor">
+          <h5>Available colors:</h5>
+          <div id="color-black" class="itemcolors"></div>
+          <div id="color-lightblue" class="itemcolors"></div>
+          <div id="color-darkblue" class="itemcolors"></div>
+          <div id="color-green" class="itemcolors"></div>
+        </div>
+        <div class="itemprice">
+          <h5>Price:</h5>
+          <span  class="shop-item-price" id="itemprice">290sek</span>
+        </div>
+        <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+      </div>
+    </div>
+    <div id="expanded-img" role="img" aria-hidden="true" hidden>
+      <div id="item-close-icon-img" class="icon-img">
+        <img class="close-icon" class="icon" id="item-close-icon" src="Icons & Images/close.svg" alt="item-close-icon"
+          id="close">
+      </div>
+        <img class="large-img-exp" id="expanded-img-pic" src="Icons & Images/large-pic.jpeg" alt="large-img-exp">
+    </div>
+
+      <div class="item2 items" id="niceJeans">
+      <div class="wrap">
+        <div class="small-pics">
+          <div id="firstmininice" class="small-pic-nice"><img class="small-pic-img" src="Icons & Images/jeans.jpg" alt="small-pic1" width="50px" height="50px"></div>
+          <div id="mini" class="small-pic-nice"><img class="small-pic-img" src="imagesback/niceback.jpg" alt="small-pic2" width="50px" height="50px"></div>
+          <div id="mini" class="small-pic-nice"><img class="small-pic-img" src="Icons & Images/small-pic3.jpeg" alt="small-pic3" width="50px" height="50px"></div>
+        </div>
+        <div class="wrap2">     
+          <div class="large-pic">
+            <button onclick="plusDivs(-1)" id="change-btn-left2" type="button" class="arrow-left"></button>
+              <div id="nicefirst" class="nicephoto"><img class="shop-item-image" class="large-pic-img" src="Icons & Images/jeans.jpg" alt="large-pic-img" width="300px" height="300px"></div>
+              <div id="5" class="nicephoto"><img class="large-pic-img" src="imagesback/niceback.jpg" alt="large-pic-img" width="300px" height="300px"></div>
+              <div id="6" class="nicephoto"><img class="large-pic-img" src="Icons & Images/small-pic3.jpeg" alt="large-pic-img" width="300px" height="300px"></div>
+            <button onclick="plusDivs(1)" id="change-btn-right2" type="button" class="arrow-right"></button>
+          </div>
+          <div class="exp"><button id="expand-btn-nice">Click to expand <img src="Icons & Images/magnifying-icon.png"
+            alt="magnifying-icon"></button></div>
+        </div>    
+      </div>
+      <div class="item-info">
+        <span id="amazjeans" class="shop-item-title"><p>Nice Jeans</p></span>
+        <div class="itemsize">
+          <h5>Available sizes:</h5>
+          <div class="size-option">S</div>
+          <div class="size-option">M</div>
+          <div class="size-option">L</div>
+          <div class="size-option">XL</div>
+        </div>
+        <div class="itemcolor">
+          <h5>Available colors:</h5>
+          <div id="color-black" class="itemcolors"></div>
+          <div id="color-lightblue" class="itemcolors"></div>
+          <div id="color-darkblue" class="itemcolors"></div>
+          <div id="color-green" class="itemcolors"></div>
+        </div>
+        <div class="itemprice">
+          <h5>Price:</h5>
+          <span  class="shop-item-price" id="itemprice">200sek</span>
+        </div>
+        <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+      </div>
+    </div>
+    <div id="expanded-img-nice" role="img" aria-hidden="true" hidden>
+      <div id="item-close-icon-img-nice" class="icon-img">
+        <img class="close-icon" class="icon" id="item-close-icon" src="Icons & Images/close.svg" alt="item-close-icon"
+          id="close">
+      </div>
+        <img class="large-img-exp" id="expanded-img-pic-nice" src="Icons & Images/jeans.jpg" alt="large-img-exp">
+    </div>
+
+    <div class="item3 items" id="coolJeans">
+      <div class="wrap">
+        <div class="small-pics">
+          <div id="firstminicool" class="small-pic-cool"><img class="small-pic-img" src="Icons & Images/jeans2.jfif" alt="small-pic1" width="50px" height="50px"></div>
+          <div id="mini" class="small-pic-cool"><img class="small-pic-img" src="imagesback/coolback.webp" alt="small-pic2" width="50px" height="50px"></div>
+          <div id="mini" class="small-pic-cool"><img class="small-pic-img" src="Icons & Images/small-pic3.jpeg" alt="small-pic3" width="50px" height="50px"></div>
+        </div>
+        <div class="wrap2">     
+          <div class="large-pic">
+            <button onclick="plusDivscool(-1)" id="change-btn-left2" type="button" class="arrow-left"></button>
+              <div id="coolfirst" class="coolphoto"><img class="shop-item-image" class="large-pic-img" src="Icons & Images/jeans2.jfif" alt="large-pic-img" width="300px" height="300px"></div>
+              <div id="5" class="coolphoto"><img class="large-pic-img" src="imagesback/coolback.webp" alt="large-pic-img" width="300px" height="300px"></div>
+              <div id="6" class="coolphoto"><img class="large-pic-img" src="Icons & Images/small-pic3.jpeg" alt="large-pic-img" width="300px" height="300px"></div>
+            <button onclick="plusDivscool(1)" id="change-btn-right2" type="button" class="arrow-right"></button>
+          </div>
+          <div class="exp"><button id="expand-btn-cool">Click to expand <img src="Icons & Images/magnifying-icon.png"
+            alt="magnifying-icon"></button></div>
+        </div>    
+      </div>
+      <div class="item-info">
+        <span id="amazjeans" class="shop-item-title"><p>Cool Jeans</p></span>
+        <div class="itemsize">
+          <h5>Available sizes:</h5>
+          <div class="size-option">S</div>
+          <div class="size-option">M</div>
+          <div class="size-option">L</div>
+          <div class="size-option">XL</div>
+        </div>
+        <div class="itemcolor">
+          <h5>Available colors:</h5>
+          <div id="color-black" class="itemcolors"></div>
+          <div id="color-lightblue" class="itemcolors"></div>
+          <div id="color-darkblue" class="itemcolors"></div>
+          <div id="color-green" class="itemcolors"></div>
+        </div>
+        <div class="itemprice">
+          <h5>Price:</h5>
+          <span  class="shop-item-price" id="itemprice">250sek</span>
+        </div>
+        <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+      </div>
+    </div>
+    <div id="cool-exp" role="img" aria-hidden="true" hidden>
+      <div id="item-close-icon-img-cool" class="icon-img">
+        <img class="close-icon" class="icon" id="item-close-icon" src="Icons & Images/close.svg" alt="item-close-icon"
+          id="close">
+      </div>
+        <img class="large-img-exp" id="expanded-img-pic-cool" src="Icons & Images/jeans2.jfif" alt="large-img-exp">
+    </div>
+
+    <div class="item4 items" id="awesomeJeans">
+      <div class="wrap">
+        <div class="small-pics">
+          <div id="firstminiawesome" class="small-pic-awesome"><img class="small-pic-img" src="Icons & Images/jeans3.jfif" alt="small-pic1" width="50px" height="50px"></div>
+          <div id="mini" class="small-pic-awesome"><img class="small-pic-img" src="imagesback/awesomeback.jpg" alt="small-pic2" width="50px" height="50px"></div>
+          <div id="mini" class="small-pic-awesome"><img class="small-pic-img" src="Icons & Images/small-pic3.jpeg" alt="small-pic3" width="50px" height="50px"></div>
+        </div>
+        <div class="wrap2">     
+          <div class="large-pic">
+            <button onclick="plusDivsawesome(-1)" id="change-btn-left2" type="button" class="arrow-left"></button>
+              <div id="awesomefirst" class="awesomephoto"><img class="shop-item-image" class="large-pic-img" src="Icons & Images/jeans3.jfif" alt="large-pic-img" width="300px" height="300px"></div>
+              <div id="5" class="awesomephoto"><img class="large-pic-img" src="imagesback/awesomeback.jpg" alt="large-pic-img" width="300px" height="300px"></div>
+              <div id="6" class="awesomephoto"><img class="large-pic-img" src="Icons & Images/small-pic3.jpeg" alt="large-pic-img" width="300px" height="300px"></div>
+            <button onclick="plusDivsawesome(1)" id="change-btn-right2" type="button" class="arrow-right"></button>
+          </div>
+          <div class="exp"><button id="expand-btn-awesome">Click to expand <img src="Icons & Images/magnifying-icon.png"
+            alt="magnifying-icon"></button></div>
+        </div>    
+      </div>
+      <div class="item-info">
+        <span id="amazjeans" class="shop-item-title"><p>Awesome Jeans</p></span>
+        <div class="itemsize">
+          <h5>Available sizes:</h5>
+          <div class="size-option">S</div>
+          <div class="size-option">M</div>
+          <div class="size-option">L</div>
+          <div class="size-option">XL</div>
+        </div>
+        <div class="itemcolor">
+          <h5>Available colors:</h5>
+          <div id="color-black" class="itemcolors"></div>
+          <div id="color-lightblue" class="itemcolors"></div>
+          <div id="color-darkblue" class="itemcolors"></div>
+          <div id="color-green" class="itemcolors"></div>
+        </div>
+        <div class="itemprice">
+          <h5>Price:</h5>
+          <span  class="shop-item-price" id="itemprice">300sek</span>
+        </div>
+        <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+      </div>
+    </div>
+    <div id="awesome-exp" role="img" aria-hidden="true" hidden>
+      <div id="item-close-icon-img-awesome" class="icon-img">
+        <img class="close-icon" class="icon" id="item-close-icon" src="Icons & Images/close.svg" alt="item-close-icon"
+          id="close">
+      </div>
+        <img class="large-img-exp" id="expanded-img-pic-awesome" src="Icons & Images/jeans3.jfif" alt="large-img-exp">
+    </div>
+
+    <div class="item5 items" id="perfectJeans">
+      <div class="wrap">
+        <div class="small-pics">
+          <div id="firstminiperfect" class="small-pic-perfect"><img class="small-pic-img" src="Icons & Images/jeans4.jfif" alt="small-pic1" width="50px" height="50px"></div>
+          <div id="mini" class="small-pic-perfect"><img class="small-pic-img" src="imagesback/perfectback.jpg" alt="small-pic2" width="50px" height="50px"></div>
+          <div id="mini" class="small-pic-perfect"><img class="small-pic-img" src="Icons & Images/small-pic3.jpeg" alt="small-pic3" width="50px" height="50px"></div>
+        </div>
+        <div class="wrap2">     
+          <div class="large-pic">
+            <button onclick="plusDivsperfect(-1)" id="change-btn-left2" type="button" class="arrow-left"></button>
+              <div id="perfectfirst" class="perfectphoto"><img class="shop-item-image" class="large-pic-img" src="Icons & Images/jeans4.jfif" alt="large-pic-img" width="300px" height="300px"></div>
+              <div id="5" class="perfectphoto"><img class="large-pic-img" src="imagesback/perfectback.jpg" alt="large-pic-img" width="300px" height="300px"></div>
+              <div id="6" class="perfectphoto"><img class="large-pic-img" src="Icons & Images/small-pic3.jpeg" alt="large-pic-img" width="300px" height="300px"></div>
+            <button onclick="plusDivsperfect(1)" id="change-btn-right2" type="button" class="arrow-right"></button>
+          </div>
+          <div class="exp"><button id="expand-btn-perfect">Click to expand <img src="Icons & Images/magnifying-icon.png"
+            alt="magnifying-icon"></button></div>
+        </div>    
+      </div>
+      <div class="item-info">
+        <span id="amazjeans" class="shop-item-title"><p>Perfect Jeans</p></span>
+        <div class="itemsize">
+          <h5>Available sizes:</h5>
+          <div class="size-option">S</div>
+          <div class="size-option">M</div>
+          <div class="size-option">L</div>
+          <div class="size-option">XL</div>
+        </div>
+        <div class="itemcolor">
+          <h5>Available colors:</h5>
+          <div id="color-black" class="itemcolors"></div>
+          <div id="color-lightblue" class="itemcolors"></div>
+          <div id="color-darkblue" class="itemcolors"></div>
+          <div id="color-green" class="itemcolors"></div>
+        </div>
+        <div class="itemprice">
+          <h5>Price:</h5>
+          <span  class="shop-item-price" id="itemprice">350sek</span>
+        </div>
+        <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+      </div>
+    </div>
+    <div id="perfect-exp" role="img" aria-hidden="true" hidden>
+      <div id="item-close-icon-img-perfect" class="icon-img">
+        <img class="close-icon" class="icon" id="item-close-icon" src="Icons & Images/close.svg" alt="item-close-icon"
+          id="close">
+      </div>
+        <img class="large-img-exp" id="expanded-img-pic-perfect" src="Icons & Images/jeans4.jfif" alt="large-img-exp">
+    </div>
+
+      <hr>
+
+    <div class="browsing">
+      <div class="container content-section">
+        <h7 class="related">Related items:</h7>
+        <div class="shop-items">
+          <div class="shop-item">
+            <div class="clickToBrowse"onclick="nice()">
+              <span class="shop-item-title"><p>Nice jeans</p> </span>
+              <img class="shop-item-image" id="nice1" src="Icons & Images/jeans.jpg" >
+            </div>
+            <div class="shop-item-details">
+              <span class="shop-item-price">200sek</span>
+              <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+            </div>
+          </div>
+          <div class="shop-item">
+            <div class="clickToBrowse"onclick="cool()">
+              <span class="shop-item-title"><p>Cool Jeans</p></span>
+              <img class="shop-item-image" id="cool1" src="Icons & Images/jeans2.jfif">
+            </div>
+            <div class="shop-item-details">
+              <span class="shop-item-price">250sek</span>
+              <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+            </div>
+          </div>
+          <div class="shop-item">
+            <div class="clickToBrowse"onclick="awesome()">
+              <span class="shop-item-title"> <p>Awesome Jeans</p> </span>
+              <img class="shop-item-image" id="awesome1" src="Icons & Images/jeans3.jfif">
+            </div>
+            <div class="shop-item-details">
+              <span class="shop-item-price">300sek</span>
+              <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+            </div>
+          </div>
+          <div class="shop-item">
+            <div class="clickToBrowse"onclick="perfect()">
+              <span class="shop-item-title"> <p>Perfect Jeans</p> </span>
+              <img class="shop-item-image" id="perfect1" src="Icons & Images/jeans4.jfif">
+            </div>
+            <div class="shop-item-details">
+              <span class="shop-item-price">350sek</span>
+              <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <hr>
+
+    <div id="chat-icon-img" class="icon-img">
+      <img id="chat-icon" class="icon" src="Icons & Images/chat icon.svg" alt="chat-icon">
+    </div>
+    <div id="chat-popup" role="textbox" aria-hidden="true" hidden>
+      <div id="chat-close-icon-img" class="icon-img">
+        <img class="close-icon" class="icon" id="chat-close-icon" src="Icons & Images/close.svg" alt="close-icon"
+          id="close">
+      </div>
+      <p class="h2f">Chat with us!</p>
+      <div id="chat-email-box">
+        <p>Your e-mail address:</p>
+        <input type="text" placeholder="E-mail..." name="chat-email" required>
+      </div>
+      <div id="chat-chat-box">
+        <p>Message:</p>
+        <input type="text" placeholder="Type message..." name="chat-chat" required>
+      </div>
+      <button id="chat-submit">Submit message</button>
+    </div>
+
+    <div id="chat-confirmation" role="textbox" aria-hidden="true" hidden>
+      <div id="confirmation-close-icon-img" class="icon-img">
+        <img class="close-icon" class="icon" id="chat-close-icon" src="Icons & Images/close.svg" alt="close-icon"
+          id="close">
+      </div>
+      <p class="chat-text">Thank you for your message.</p>
+      <p class="chat-text">We will reach out to you via email shortly.</p>
+    </div>
+    
+    <div id="signupPopup" class="popup" role="textbox" aria-hidden="true" hidden>
+      <p class="h2f">Hello penguin friend!</p>
+      <div id="signup-close-icon-img" class="icon-img">
+        <img class="close-icon" class="icon" id="signup-close-icon" src="Icons & Images/close.svg" alt="close-icon" id="close">
+      </div>
+        <hr>
+      <p>Thank you for joining the penguin family!</p>
+      <p>All you have to do now is log in by clicking the link that was sent to you by email.</p>
+    </div>
+
+    <div id="footer">
+      <div id="about-us-box">
+        <p class="h2f">About us:</p>
+        <div id="about-us-content">
+          <p>Penguin clothes</p>
+          <p>Address: Santa Claus Main Post Office</p>
+          <p>FI-96930 Arctic Circle</p>
+          <p>Finland</p>
+          <p>Tel: 986213645</p>
+        </div>
+      </div>
+      <div id="signupBox">
+        <p class="h2f">Join us!</p>
+        <div id="signupbar" class="bar">
+          <input id="signupinput" type="text" placeholder="E-mail..." name="email" required>
+        </div>
+        <button type="submit" class="signupbtn" id="signupbtn" onclick="signupPopup()">Sign Up</button>
+      </div>
+    </div>
+  </body>
+</html>

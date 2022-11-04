@@ -1,0 +1,104 @@
+#story {
+    font-size: larger;
+    color: black;
+    font: optional;
+    position: relative;
+    top: -20px;
+    margin: 30px;
+    inline-size: 500px;
+    overflow-wrap: break-word;
+
+}
+.wrapped {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+#textarea {
+    margin-left: 50px;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    margin-right: 50px;
+}
+.select {
+    width: 100px;
+    height: 35px;
+    display: block;
+    font-size: 17px;
+    font-family: Amiri;
+    font-weight: 300;
+    color: black;
+    padding: 10px 15px 10px 15px;
+    max-width: 100%; 
+    box-sizing: content-box;
+    margin: 17px;
+    border: 1px solid black;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    -webkit-appearance: none;
+    background-color:#115deb31;
+    border-radius: 10px 10px 10px 10px;
+
+  
+}
+
+.select option {
+  font-weight:normal;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin-left: 30px;
+  
+}
+#btn {
+  width: 100px;
+  height: 35px;
+  display: block;
+  font-size: 17px;
+  font-family: Amiri;
+  font-weight: 300;
+  color: black;
+  padding: 10px 15px 10px 15px;
+  max-width: 100%; 
+  box-sizing: content-box;
+  margin: 17px;
+  border: 1px solid black;
+  box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+  -webkit-appearance: none;
+  background-color:#115deb31;
+  border-radius: 10px 10px 10px 10px;
+
+}
+h1 {
+    font-size: larger;
+}
+
+.first {
+  color: rgb(0, 0, 0);
+  font-size: larger;
+  font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 1.5;
+
+}
+
+.second {
+  color: rgb(12, 26, 107);
+  font-size: medium;
+  font-style: oblique;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  line-height: 1.0;
+}
+
+.third {
+  color: rgb(0, 0, 0);
+  font-size: small;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.2;
+
+}

@@ -1,0 +1,179 @@
+
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+.box{
+	font-size: 16px;
+}
+
+.a1.box {
+    background-color: #663399;
+    position: absolute;
+    left: 10px;
+    bottom: 7px;
+}
+.b1.box {
+    background-color:#a9a9a9;
+    position: absolute;
+    left: 60px;
+    bottom: 7px;
+}
+.c1.box {
+    background-color:#a9a9a9;
+    position: absolute;
+    left: 110px;
+    bottom: 7px;
+}
+.a2.box {
+    background-color: #663399;
+    position: absolute;
+    right: 10px;
+    bottom: 7px;
+}
+.b2.box {
+    background-color:#a9a9a9;
+    position: absolute;
+    right: -5px;
+    bottom: 57px;
+}
+.c2.box {
+    background-color:#a9a9a9;
+    position: absolute;
+    right: 10px;
+    bottom: 107px;
+}
+
+.a3.box {
+    background-color:#663399;
+    position: absolute;
+    left: -5px;
+    top: 5px;
+}
+
+.b3.box {
+    background-color: #ff6347;
+    position: absolute;
+    left: 45px;
+    top: 5px;
+    
+}
+.c3.box {
+    background-color:#a9a9a9;
+    position: absolute;
+    left: 95px;
+    top: 5px;
+}
+.a4.box {
+    background-color:#663399;
+    transform:rotate(90deg);
+    position: absolute;
+    left: 0px;
+    top: 5%;
+}
+.b4.box {
+    background-color:#a9a9a9;
+    transform:rotate(90deg);
+    position: absolute;
+    left: 0px;
+    top: 45%;
+}
+.c4.box {
+    background-color:#a9a9a9;
+    transform:rotate(90deg);
+    position: absolute;
+    left: 0px;
+    top: 85%;
+}
+.a5.box {
+    background-color:#663399;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.b5.box {
+    background-color:#a9a9a9;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+.c5.box {
+    background-color:#a9a9a9;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+.card.a {
+    background-color: rgb(255, 255, 255);
+    
+}
+.card.b {
+    background-color: rgb(255, 255, 255);
+}
+.card.c {
+    background-color: rgb(255, 255, 255);
+}
+.card.d {
+    background-color: rgb(255, 255, 255);
+}
+.card.e {
+    background-color: rgb(255, 255, 255);
+}
+.box {
+    width: 40px;
+    height: 40px;
+
+}
+.card {
+    border: 2px solid;
+    width: 250px;
+    height: 300px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 30px;
+    padding: 3px;
+    border-radius: 10px;
+    position: relative;
+    font-size: 80px;
+
+}
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 30px;
+
+
+}
+.box.fixed.bottom.right {
+    width: 150px;
+    height: 150px;
+    background-color:  #a9a9a9;
+    position: absolute;
+    right: -155px;
+    bottom: 0px;
+
+  }
+.box.fixed.bottom.left {
+    width: 150px;
+    height: 150px;
+    background-color: #a9a9a9;
+    position: absolute;
+    bottom: 0px;
+    left: -155px;
+      }
+  
+div { 
+	height: 10em;
+	display: flex;
+	align-items: center;
+	justify-content: center 
+}
+
+.background {
+	font-size: 80px;
+}

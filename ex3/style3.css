@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .box {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 100px;
+  }
+  
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 500px;
+    word-wrap: break-word;
+    font-size: larger;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .footer {
+    width: 100%;
+    padding: 10px;
+    height: 100px;
+  }
+  
+  h1 {
+    color: white;
+    text-align: center;
+  }
+  

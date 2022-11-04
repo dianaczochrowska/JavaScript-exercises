@@ -1,0 +1,87 @@
+#change-btn-right,   #change-btn-right2  {
+    background-color: rgb(255, 255, 255);
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-left: 20px solid rgb(111, 116, 111);
+    left: 10px;
+    cursor: pointer;
+  }
+    
+  #change-btn-left, #change-btn-left2 {
+    background-color: rgb(255, 255, 255);
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid transparent;
+    border-right: 20px solid rgb(111, 116, 111);
+    right: 10px;
+    cursor: pointer;
+  }
+    
+  #change-btn-right:hover, #change-btn-right2:hover {
+    background-color: rgb(255, 255, 255);;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-left: 20px solid rgb(54, 54, 54);
+    cursor: pointer;
+  }
+    
+  #change-btn-left:hover, #change-btn-left2:hover {
+    background-color: rgb(255, 255, 255);
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid transparent;
+    border-right: 20px solid rgb(54, 54, 54);
+    cursor: pointer;
+  }
+
+  .item, .item2, .item3, .item4, .item5 {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+  padding-top: 183px;
+}
+
+.hide {
+    display:none;
+}
+.shoow {
+    display:flex;}
+
+#nice1:hover {
+  content: url("imagesback/niceback.jpg");
+  height: 400px;
+}
+
+#cool1:hover {
+  content: url("imagesback/coolback.webp");
+  height: 400px;
+  width: 100%;
+}
+
+#awesome1:hover {
+  content: url("imagesback/awesomeback.jpg");
+  height: 400px;
+  width: 300px;
+}
+
+#perfect1:hover {
+  content: url("imagesback/perfectback.jpg");
+  height: 400px;
+  width: 100%;
+}
+
+.items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+#niceJeans, #coolJeans, #awesomeJeans, #perfectJeans  {
+  display: none;
+}
+
+
